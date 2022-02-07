@@ -22,6 +22,7 @@ class App extends Component {
       this.setState({
         web3, accounts, contract
       })
+      console.log(deployedNetwork.address);
     } catch (error) {
       alert("Failed to load web3,accounts,contract.For more info see console");
       console.log(error);
