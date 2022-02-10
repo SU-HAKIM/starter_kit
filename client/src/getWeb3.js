@@ -41,10 +41,10 @@ import Todo from "./contracts/Todo.json";
 // export default getWeb3;
 
 const getContract = async (web3) => {
-  let network_id = web3.eth.net.getId();
-  console.log(network_id);
+  let network_id = await web3.eth.net.getId();
   let contract_address = Todo.networks[network_id];
-  return new web3.eth.Contract(Todo.abi, contract_address);
+  console.log(contract_address.address, "=> address");
+  return new web3.eth.Contract(Todo.abi, contract_address.address);
 }
 
 export default getContract;
