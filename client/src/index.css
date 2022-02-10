@@ -26,20 +26,3 @@ p,
 div {
   font-size: 1.6rem;
 }
-
-.btn {
-  display: inline-block;
-  padding: 1rem;
-  border: none;
-  outline: none;
-  background: var(--primary);
-  color: var(--secondary);
-  font-weight: 500;
-  border-radius: 0.4rem;
-  box-shadow: var(--shadow);
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.btn:active {
-  box-shadow: none;
-}
