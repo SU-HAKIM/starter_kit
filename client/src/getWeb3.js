@@ -1,5 +1,3 @@
-import Todo from "./contracts/Todo.json";
-
 // import Web3 from "web3";
 
 // const contract_address = "0xC57a3B00e4523cb76095080311ed4BC597B2eE0F";
@@ -40,11 +38,11 @@ import Todo from "./contracts/Todo.json";
 
 // export default getWeb3;
 
-const getContract = async (web3) => {
+const getContract = async (web3,contracts) => {
   let network_id = await web3.eth.net.getId();
-  let contract_address = Todo.networks[network_id];
+  let contract_address = contracts.networks[network_id];
   console.log(contract_address.address, "=> address");
-  return new web3.eth.Contract(Todo.abi, contract_address.address);
+  return new web3.eth.Contract(contracts.abi, contract_address.address);
 }
 
 export default getContract;
