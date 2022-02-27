@@ -3,6 +3,8 @@ import getContract from "./getWeb3";
 import Web3 from 'web3';
 import "./App.css";
 
+import Navbar from "./components/Navbar";
+
 const App = () => {
 
   const [web3, setWeb3] = useState(null);
@@ -35,9 +37,9 @@ const App = () => {
     }
   }
   return (
-    <div>
-
-    </div>
+    <>
+        <Navbar address={accounts} NavText="NavText" />
+    </>
   );
 }
 
