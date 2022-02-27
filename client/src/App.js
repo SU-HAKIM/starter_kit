@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import getContract from "./getWeb3";
 import Web3 from 'web3';
 import "./App.css";
@@ -8,6 +8,13 @@ const App = () => {
   const [web3, setWeb3] = useState(null);
   const [accounts, setAccounts] = useState(null);
   const [contract, setContract] = useState(null);
+  
+  useEffect(()=>{
+    let connect=async()=>{
+      await connectToMetaMask();
+    }
+    connect()
+  },[])
 
 
   const connectToMetaMask = async () => {
@@ -19,7 +26,7 @@ const App = () => {
         const contract = await getContract(web3);
         setWeb3(web3);
         setContract(contract);
-        setAccounts(accounts);
+        setAccounts(accounts[0]);
       } catch (error) {
         console.log(error);
       }
@@ -28,7 +35,7 @@ const App = () => {
     }
   }
   return (
-    <div className="App">
+    <div>
 
     </div>
   );
