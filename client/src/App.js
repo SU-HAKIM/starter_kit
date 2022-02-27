@@ -5,6 +5,8 @@ import "./App.css";
 
 import Navbar from "./components/Navbar";
 
+const baseUrl = "https://ipfs.infura.io/ipfs/";
+
 const App = () => {
 
   const [web3, setWeb3] = useState(null);
