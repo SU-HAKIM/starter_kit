@@ -27,7 +27,7 @@ const App = () => {
         await window.ethereum.request({ method: "eth_requestAccounts" });
         let web3 = new Web3(window.ethereum);
         let accounts = await web3.eth.getAccounts();
-        const contract = await getContract(web3);
+        const contract = await getContract(web3);//TODO:Import Contract from 'contracts' folder and pass after web3
         setWeb3(web3);
         setContract(contract);
         setAccounts(accounts[0]);
@@ -40,7 +40,7 @@ const App = () => {
   }
   return (
     <>
-        <Navbar address={accounts} NavText="NavText" />
+        <Navbar address={accounts} NavText="NavText" />{/*Change NavText*/}
     </>
   );
 }
