@@ -29,7 +29,7 @@ const App = () => {
         let accounts = await web3.eth.getAccounts();
         const contract = await getContract(web3);//TODO:Import Contract from 'contracts' folder and pass after web3
         setWeb3(web3);
-        setContract(contract);
+        setContract(contract.contract);
         setAccounts(accounts[0]);
       } catch (error) {
         console.log(error);
