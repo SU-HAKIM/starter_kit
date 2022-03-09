@@ -1,24 +1,26 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import getContract from "./getWeb3";
 import Web3 from 'web3';
 import "./App.css";
+import HakimLogo from "./images/Hakim.svg";
 
 import Navbar from "./components/Navbar";
 
 const baseUrl = "https://ipfs.infura.io/ipfs/";
+//TODO: to get ipfs deployed content use `baseUrl${contentHash}`
 
 const App = () => {
 
   const [web3, setWeb3] = useState(null);
   const [accounts, setAccounts] = useState(null);
   const [contract, setContract] = useState(null);
-  
-  useEffect(()=>{
-    let connect=async()=>{
+
+  useEffect(() => {
+    let connect = async () => {
       await connectToMetaMask();
     }
     connect()
-  },[])
+  }, [])
 
 
   const connectToMetaMask = async () => {
@@ -40,7 +42,23 @@ const App = () => {
   }
   return (
     <>
-        <Navbar address={accounts} NavText="NavText" />{/*Change NavText*/}
+      <Navbar address={accounts} NavText="NavText" />{/*TODO:Change NavText*/}
+      <div className="App">
+        <header className="App-header">
+          <img src={HakimLogo} className="App-logo" alt="logo" />
+          <p>
+            Edit <code>src/App.js</code> and save to reload.
+          </p>
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+          </a>
+        </header>
+      </div>
     </>
   );
 }
