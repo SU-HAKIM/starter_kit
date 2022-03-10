@@ -2,9 +2,7 @@
 
 **_Author: Sadiul Hakim._**
 
-**_`A Computer Programmer,Blockchain Developer,FullStack Web Developer.`_**
-
-**_`I am a self taught Programmer.`_**
+**_`A Self Taught Computer Programmer,Blockchain Developer,FullStack Web Developer.`_**
 
 ---
 
